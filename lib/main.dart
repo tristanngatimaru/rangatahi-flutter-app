@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ui/NavigationBar/navigation.dart';
+import 'pages/IwiHub/iwi_hub_home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,19 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
-          title: const Text('flutter is fun'),
+          backgroundColor: Colors.white,
+          title: const Text('Iwi Hub'),
+          centerTitle: true,
         ),
-        body: Center(
-          child: Container(
-            margin: const EdgeInsets.all(50),
-            padding: const EdgeInsets.all(10),
-            color: Colors.red,
-            height: 100,
-            width: 100,
-            child: const Text('hi mum'),
-          ),
-        ),
+        body: IwiHubHomePage(),
         bottomNavigationBar: MainNavigation(),
       ),
     );
